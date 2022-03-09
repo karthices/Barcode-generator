@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+          "width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h2 id="testbarcode" content="ADH1006"></h2>
+    <script type="text/javascript">
+        const makebarcode = function(str,elm){
+            var code = new Code128(str);
+            code.insert(elm);
+        }
+        var elm = document.getElementById("testbarcode");
+        makebarcode(elm.getAttribute("content"),elm);
+    </script>
+</body>
+</html>
